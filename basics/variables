@@ -1,2 +1,6 @@
 a = 'Hello, World!'
 print(a)
+
+b = 'New str'
+
+print(b)
