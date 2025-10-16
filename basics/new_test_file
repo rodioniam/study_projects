@@ -1,0 +1,6 @@
+new_test = [1, 2, 3]
+result = []
+for el in new_test:
+    result.append(el**2)
+
+print(result)
