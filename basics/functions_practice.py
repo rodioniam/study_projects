@@ -5,4 +5,10 @@ def greeting():
     print(f"Hello, {user_input}")
 
 
-greeting()
+# ask user lenght and width of the room and calculate its size
+
+def room_size():
+    length = float(input('Enter length: '))
+    width = float(input('Enter width: '))
+    size = length * width
+    print(f'Size of the room is {size} meters')
