@@ -6,6 +6,6 @@ Here i will collect my files and basic scripts, while i study Python
 
 -**modules_and_files/** - importing and using Python modules, working with txt files
 
--**advanced/** - lambda functions, comprehensions, iterators and generators, working with errors, data and time, regex, archiving
+-**advanced/** - lambda functions, comprehensions, iterators and generators, working with errors, data and time, regex, unpacking
 
 *work in progress, updating*
