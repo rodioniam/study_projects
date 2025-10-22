@@ -57,6 +57,38 @@ def generate_values(start, end):
 
 print(generate_values(start, end))
 
+# sum by quarter
+
+lst3 = [2, 2, 1, 4, 2, 4, 5, 3, 2, 8, 1, 1]
+
+
+def sum_by_quarter(lst):
+    result = []
+
+    for i in range(1, 5):
+        quarter_sum = round(lst3.pop(0) + lst3.pop(0) + lst3.pop(0))
+        result.append(quarter_sum)
+    return result
+
+
+print(sum_by_quarter(lst3))
+
+
+# count names in list
+names = ['John', 'Marry', 'John', 'Marry', 'John',
+         'Marry', 'Lucio', 'Marry', 'Lucio', 'Marry', 'Lucio', 'Lucio']
+
+
+def name_count(names):
+    result = {}
+
+    for name in names:
+        result[name] = result.get(name, 0) + 1
+    return result
+
+
+print(name_count(names))
+
 # merge two dicts, so keys from first one become keys of merged dict and values with same keys become a list
 dict1 = {1: 'abc', 2: 'def'}
 dict2 = {3: 'ghi', 2: '234'}
