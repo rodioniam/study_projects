@@ -8,3 +8,4 @@ print(a)
 
 # wind, solar, pressue, speed - labels
 # station_1, station_2 - indexes
+# series is just one column from dataframe

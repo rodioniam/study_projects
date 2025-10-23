@@ -1,4 +1,4 @@
-# regex are a tool to work with strings. I can search for specific charachters, letters, symbols, words etc.
+# regex are a tool to work with strings. I can search for specific characters, letters, symbols, words etc.
 # to use regex i need to import re and also use raw strings
 # https://regex101.com/ is good website to check regex
 
