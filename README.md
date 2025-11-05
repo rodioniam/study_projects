@@ -10,4 +10,6 @@ Here i will collect my files and basic scripts, while i study Python
 
 -**pandas/** - learning how to work with pandas library
 
+-**numpy/** - learning how to work with numpy library
+
 *work in progress, updating*
