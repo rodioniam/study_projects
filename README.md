@@ -12,4 +12,6 @@ Here i will collect my files and basic scripts, while i study Python
 
 -**numpy/** - learning how to work with numpy library
 
+-**visualization/** - data visualization in python
+
 *work in progress, updating*
