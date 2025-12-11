@@ -16,4 +16,6 @@ Here i will collect my files and basic scripts, while i study Python
 
 -**project_1/** - some kind of final project, which includes everything i've learned so far
 
+-**practice/** - random practice files
+
 *work in progress, updating*
