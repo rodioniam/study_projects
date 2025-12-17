@@ -1,3 +1,7 @@
+import random
+
+# for ... in ... loop
+
 numbers = [2, 4, 6, 8]
 
 result = []
@@ -76,3 +80,44 @@ def filter_list_2(list_to_filter, value_type):
 res_3 = list(filter_list_2(l, int))
 
 print(res_3)
+
+
+# while loop
+
+
+i = 10
+
+while i < 50:
+    print(i)
+    i += 10
+
+
+random_num = random.randint(1, 5)
+
+# while True:
+#    my_num = int(input('Enter number from 1 to 5: '))
+#    if my_num != random_num:
+#        print('Oops')
+#        continue
+#    print('Yeah!', random_num)
+#    break
+
+
+# 1
+
+while True:
+
+    try:
+        num1 = float(input('Please enter first number: '))
+        num2 = float(input('Please enter second number: '))
+    except ValueError as err:
+        print(err)
+        print('Not a number!')
+        continue
+
+    print(num1/num2)
+
+    continue_request = (input('Do you want to continue?: ')).lower()
+
+    if continue_request == 'no':
+        break
