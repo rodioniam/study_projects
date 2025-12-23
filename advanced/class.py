@@ -134,3 +134,54 @@ Messages.total_messages  # 200
 
 msg3 = Messages('Third message')
 Messages.total_messages  # 201
+
+
+# making custom magic methods for classes
+
+class Messages_2:
+    def __init__(self, text):
+        self.text = text
+        self.msg_rating = 0
+
+    def give_rating(self):
+        self.msg_rating += 1
+
+    # added the ability to add
+    def __add__(self, other):
+        return (f"{self.text} {other.text}", self.msg_rating + other.msg_rating)
+
+    # added comparison option
+    def __eq__(self, other):
+        if self.text == other.text and self.msg_rating == other.msg_rating:
+            return True
+        else:
+            return False
+
+
+ms1 = Messages_2('Hello')
+ms2 = Messages_2('World!')
+ms3 = Messages_2('Hello')
+ms4 = Messages_2('Hello')
+ms1.give_rating()
+ms2.give_rating()
+ms3.give_rating()
+ms1.msg_rating  # 1
+ms2.msg_rating  # 1
+
+ms1 + ms2  # ('Hello World!', 2)
+
+ms1 == ms2  # False
+# because 'text' is different
+ms1.__dict__, ms2.__dict__
+# {'text': 'Hello', 'msg_rating': 1} {'text': 'World!', 'msg_rating': 1}
+
+ms1 == ms3  # True
+# because 'text' and 'msg_rating' are the same
+ms1.__dict__, ms3.__dict__
+# {'text': 'Hello', 'msg_rating': 1} {'text': 'Hello', 'msg_rating': 1}
+
+
+ms1 == ms4  # False
+# because 'msg_rating' is different
+ms1.__dict__, ms4.__dict__
+# {'text': 'Hello', 'msg_rating': 1} {'text': 'Hello', 'msg_rating': 0}
