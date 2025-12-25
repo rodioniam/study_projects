@@ -185,3 +185,19 @@ ms1 == ms4  # False
 # because 'msg_rating' is different
 ms1.__dict__, ms4.__dict__
 # {'text': 'Hello', 'msg_rating': 1} {'text': 'Hello', 'msg_rating': 0}
+
+
+# inheriting from existing classes
+
+
+# this way my custom list class will have all methods from og list + my new custom ones
+class ExtendedList(list):
+    def print_list_info(self):
+        return f"List has {len(self)} elements"
+
+
+lst = ExtendedList([1, 2, 3])
+
+lst.print_list_info()  # List has 3 elements
+
+lst.append(303)  # [1, 2, 3, 303]
