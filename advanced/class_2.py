@@ -20,3 +20,4 @@ my_admin.__dict__
 # {'username': 'admin123', 'email': 'admin@admin.com', 'role': 'Administrator', 'is_admin': True}
 my_user.__dict__
 # {'username': 'user123', 'email': 'user@user.com'}
+print(User.__subclasses__())
