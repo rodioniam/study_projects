@@ -50,7 +50,8 @@ class Forum:
         return user_posts
 
     def delete_user(self, user: User):
-        pass
+        if user in self.users:
+            self.users.remove(user)
 
 
 forum = Forum()
@@ -99,3 +100,13 @@ post_titles_2 = [post.title for post in forum.find_post_by_user(
     (forum.find_user_by_email(user_email)))]
 
 post_titles_2  # ['name', 'post_vvv']
+
+
+user_delete = forum.register_user('user_delete_by_name', 'delete@me.com')
+user_delete_2 = forum.register_user('user_delete_by_email', 'delete_me@me.com')
+
+print([user.username for user in forum.users])
+# ['user_1', 'user_2', 'user_delete_by_name', 'user_delete_by_email']
+
+forum.delete_user(user_delete)
+# ['user_1', 'user_2', 'user_delete_by_email']
