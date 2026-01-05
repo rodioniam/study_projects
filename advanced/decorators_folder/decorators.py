@@ -34,10 +34,11 @@ def dec_fn(fn):
         print('Executed before function 1.')
 
         result = fn(a, b)  # and here (*args, **kwargs)
+        # also this part is mandatory so original function still returns its result
 
         print('Executed after function 1.')
 
-        return result
+        return result  # this is also needed to original func to work
     return wrapper_fn
 
 
