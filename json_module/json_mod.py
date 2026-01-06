@@ -38,3 +38,10 @@ js2 = json.dumps(sneakers, indent=1)
 print(js2)
 
 print(type(js))  # is now string because json files are string
+
+# also json files can be an array
+json_array = '[1, 2, 3]'
+
+# i can convert them into python lists
+js_list = json.loads(json_array)
+print(js_list)
