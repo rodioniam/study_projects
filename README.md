@@ -18,4 +18,6 @@ Here i will collect my files and basic scripts, while i study Python
 
 -**practice/** - random practice files
 
+--**json_module/** - learning how to work with json library
+
 *work in progress, updating*
