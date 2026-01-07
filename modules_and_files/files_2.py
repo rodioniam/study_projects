@@ -42,3 +42,21 @@ for file in Path('.').iterdir():
     list_of_files.append(file)
 
 print(list_of_files)
+
+
+# this is how i can create directory
+make_dir = Path('modules_and_files').joinpath('making_folder')
+# make_dir.mkdir() if it already exists it will give an error, so better to do it with if statement
+if not make_dir.exists():
+    make_dir.mkdir()
+    print('Directory created!')
+else:
+    print('Directory with that name already exists.')
+
+
+# same with deleting directory
+if make_dir.exists():
+    make_dir.rmdir()
+    print('Directory deleted!')
+else:
+    print('Directory does not exist.')
