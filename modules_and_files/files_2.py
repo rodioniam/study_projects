@@ -1,0 +1,44 @@
+from os import path
+from pathlib import Path
+
+# command to show absolute path to current directory
+print(path.abspath('.'))
+print(Path('.').absolute())  # in this case i created 'Path' class object
+
+
+file = Path('test_file.txt')
+
+print([m for m in dir(file) if not m.startswith('_')])
+
+# also shows current directory, without creating new object
+print(Path.cwd())
+
+
+# creating new path on Mac/Unix
+
+a = Path('my_path').joinpath('local').joinpath('bin')
+a  # my_path/local/bin
+# or
+a1 = Path('my_path')/'local'/'bin'
+a1  # my_path/local/bin
+
+# for windows it usually starts with disc name
+
+# to check if file or directory exists i can use this
+
+b = Path('modules_and_files').exists()
+b  # True
+b1 = Path('modules_and_files/files_2.py').exists()
+b1  # True
+
+# check if it is directory or a file
+Path('modules_and_files').is_dir()  # True
+Path('modules_and_files/files_2.py').is_file()  # True
+
+list_of_files = []
+
+# returns all files in directory
+for file in Path('.').iterdir():
+    list_of_files.append(file)
+
+print(list_of_files)
