@@ -9,10 +9,10 @@ if not files_folder.exists():
 else:
     print('Could not create folder.')
 
-file_1_path = 'modules_and_files/files_practice_folder/file_1.txt'
-file_2_path = 'modules_and_files/files_practice_folder/file_2.txt'
+file_1_path = Path(files_folder / 'file_1.txt')
+file_2_path = Path(files_folder / 'file_2.txt')
 
-with open('modules_and_files/files_practice_folder/file_1.txt', 'w') as file_one:
+with open(file_1_path, 'w') as file_one:
     file_one.write('Line one,\nLine two,\nLine three.\n')
 
 with open(file_1_path) as file_one:
@@ -28,10 +28,11 @@ with open(file_2_path) as file_two:
         if not line:
             break
 
-if Path(file_1_path).exists() and Path(file_2_path).exists():
-    Path(file_1_path).unlink()
+
+if file_1_path.exists() and file_2_path.exists():
+    file_1_path.unlink()
     print('File deleted.')
-    Path(file_2_path).unlink()
+    file_2_path.unlink()
     print('File deleted.')
 
 if files_folder.exists():
