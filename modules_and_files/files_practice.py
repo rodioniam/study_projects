@@ -9,8 +9,8 @@ if not files_folder.exists():
 else:
     print('Could not create folder.')
 
-file_1_path = Path(files_folder / 'file_1.txt')
-file_2_path = Path(files_folder / 'file_2.txt')
+file_1_path = files_folder / 'file_1.txt'  # works because it is 'Path' class
+file_2_path = files_folder / 'file_2.txt'
 
 with open(file_1_path, 'w') as file_one:
     file_one.write('Line one,\nLine two,\nLine three.\n')
@@ -24,7 +24,7 @@ with open(file_2_path, 'w') as file_two:
 with open(file_2_path) as file_two:
     while True:
         line = file_two.readline()
-        print(line)
+        print(line.strip())
         if not line:
             break
 
