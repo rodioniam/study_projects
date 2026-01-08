@@ -1,3 +1,2 @@
-spring, summer, autumn, winter, spring, summer, autumn, winter, spring, summer, autumn, winter,
-spring, summer, autumn, winter, spring, summer, autumn, winter, spring, summer, autumn, winter,
-spring, summer, autumn, winter, spring, summer, autumn, winter, spring, summer, autumn, winter
+Added new line
+Added one more line to the file
