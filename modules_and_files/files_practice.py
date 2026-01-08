@@ -1,7 +1,8 @@
 from pathlib import Path
 
-files_folder = Path('modules_and_files').joinpath('files_practice_folder')
+files_folder = Path('modules_and_files/files_practice_folder')
 
+# instead of this i can use '.mkdir(exist_ok = True)' - will ignore error
 if not files_folder.exists():
     files_folder.mkdir()
     print('Folder created!')
